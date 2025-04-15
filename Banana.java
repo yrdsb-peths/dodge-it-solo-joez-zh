@@ -4,7 +4,7 @@ public class Banana extends Actor
 {
     public void act()
     {
-        move(-10);
+        move(-12);
         
         if (getX() <= 0) {
             resetBanana();
@@ -18,7 +18,7 @@ public class Banana extends Actor
     }
     
     public void resetBanana() {
-        int num = Greenfoot.getRandomNumber(4);
-        setLocation(600, (num+1)*100);
+        int num = Greenfoot.getRandomNumber(9);
+        setLocation(600, (num+1)*50);
     }
 }

@@ -2,19 +2,17 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 public class Hero extends Actor
 {
-    boolean atTop = true;
+    int currentX = 100;
     
     public void act()
     {
-        if (Greenfoot.mouseClicked(null)) {
-            atTop = !atTop; 
-        }
+        setLocation(100, currentX);
         
-        if (atTop) {
-            setLocation(100, 100);
+        if (Greenfoot.isKeyDown("w")) {
+            currentX -= 5; 
         }
-        else {
-            setLocation(100, 300);
+        if (Greenfoot.isKeyDown("s")) {
+            currentX += 5;
         }
     }
 }
